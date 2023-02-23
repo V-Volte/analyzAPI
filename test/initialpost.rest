@@ -1,0 +1,7 @@
+POST https://v-volte-ideal-space-funicular-w9rrg7xxrpxfv95j-5500.preview.app.github.dev/
+Content-Type: application/json
+
+{
+    "teamNumber": "69",
+    "password": "hello"
+}
