@@ -1,0 +1,16 @@
+POST <server>/api
+Content-Type: application/json
+
+{
+    "teamNumber": x,
+    "password": y
+}
+
+
+HTTP 200 OK
+Content-Type: application/json
+
+{
+    "registrationAccepted": T|F,
+    "token": z
+}
