@@ -1,0 +1,4 @@
+GET https://data.telangana.gov.in/api/1/datastore/query/54336a1c-e08e-4319-87d9-f1df1a083765/2?count=true&results=true&schema=true&keys=true&format=json
+
+
+count=true&results=true&schema=true&keys=true&format=json

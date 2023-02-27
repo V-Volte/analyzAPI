@@ -3,8 +3,6 @@ const app = express()
 const bodyParser = require('body-parser')
 const mongoose = require('mongoose')
 
-const PORT = 5500;
-
 async function connect() {
     try {
         await mongoose.connect("mongodb://volte:qwertyuiop@194.195.117.230:27017/mrits");
@@ -16,3 +14,8 @@ async function connect() {
 }
 
 connect();
+var db = mongoose.connection;
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function () {
+
+});
