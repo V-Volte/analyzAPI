@@ -1,6 +1,7 @@
 const express = require('express')
 const app = express()
 const bodyParser = require('body-parser')
+const db = require('../utils/db')
 
 const PORT = 5500
 
@@ -23,9 +24,14 @@ app.post('/', (req, res) => {
 
 })
 
-app.post('/requestdata', (req, res) => {
-    let headers = req.headers;
-
+app.get('/requestdata', async (req, res) => {
+    let data = await db.collection('PreMonsoonWaterData').find().toArray();
+    res.status(200).json({
+        status: "success",
+        data: data
+    });
 })
 
-app.listen(PORT);
+app.listen(PORT, () => {
+    console.log(`App listening on port ${PORT}`)
+});
